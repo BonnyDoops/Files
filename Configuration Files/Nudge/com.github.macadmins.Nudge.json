@@ -40,8 +40,8 @@
     "fallbackLanguage": "en",
     "forceFallbackLanguage": true,
     "forceScreenShotIcon": false,
-    "iconDarkPath": "/tmp/nudge/appleRainbow.png"
-    "iconLightPath": "/tmp/nudge/appleRainbow.png"
+    "iconDarkPath": "/tmp/nudge/appleRainbow.png",
+    "iconLightPath": "/tmp/nudge/appleRainbow.png",
     "showDeferralCount": true,
     "simpleMode": false,
     "singleQuitButton": true,
