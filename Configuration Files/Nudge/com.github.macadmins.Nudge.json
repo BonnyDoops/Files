@@ -42,6 +42,8 @@
     "forceScreenShotIcon": false,
     "iconDarkPath": "/tmp/nudge/appleRainbow.png",
     "iconLightPath": "/tmp/nudge/appleRainbow.png",
+    "screenShotDarkPath": "/tmp/nudge/updateDark.png",
+    "screenShotLightPath": "tmp/nudge/updateLight.png",
     "showDeferralCount": true,
     "simpleMode": false,
     "singleQuitButton": true,
@@ -57,7 +59,7 @@
         "mainHeader": "Your device requires a macOS Security Update",
         "primaryQuitButtonText": "Later",
         "secondaryQuitButtonText": "I understand",
-        "subHeader": "A friendly reminder from your tech team",
+        "subHeader": "A friendly reminder from your IT team",
         "customDeferralButtonText": "Choose a date/time",
         "customDeferralDropdownText": "Remind me in:"
       }
