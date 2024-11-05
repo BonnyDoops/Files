@@ -42,8 +42,6 @@
     "forceScreenShotIcon": false,
     "iconDarkPath": "/tmp/nudge/appleRainbow.png",
     "iconLightPath": "/tmp/nudge/appleRainbow.png",
-    "screenShotDarkPath": "/tmp/nudge/updateDark.png",
-    "screenShotLightPath": "tmp/nudge/updateLight.png",
     "showDeferralCount": true,
     "simpleMode": false,
     "singleQuitButton": true,
