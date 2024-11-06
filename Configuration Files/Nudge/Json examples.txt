@@ -1,0 +1,81 @@
+Singular Nudge event
+
+If you are only deploying a single Nudge event, the osVersionRequirements configuration is quite simple:
+
+JSON
+
+{
+  "osVersionRequirements": [
+    {
+      "aboutUpdateURL": "https://support.apple.com/en-us/HT211896",
+      "requiredInstallationDate": "2021-07-31T00:00:00Z",
+      "requiredMinimumOSVersion": "11.5.2"
+    }
+  ]
+}
+
+Multiple Nudge events
+
+Real-world Example 1
+
+You may find yourself in a situation where Apple releases a minor update that you want people to install, but it is not critical to the safety of your organization. (macOS 11.5.2 might be a perfect example of this.)
+
+If you find yourself in the middle of an active Nudge event — for example, macOS 11.5.1 — and a new version of macOS is released (i.e. 11.5.2), you may want to enforce macOS 11.5.2 for anyone who hasn't yet installed macOS 11.5.1 (end of August deadline), while giving users who have installed 11.5.1 more time to install 11.5.2 (middle of September deadline).
+
+JSON
+
+{
+  "osVersionRequirements": [
+    {
+      "aboutUpdateURL": "https://support.apple.com/en-us/HT211896",
+      "requiredInstallationDate": "2021-09-15T00:00:00Z",
+      "requiredMinimumOSVersion": "11.5.2",
+      "targetedOSVersionsRule": "11.5.1"
+    },
+    {
+      "aboutUpdateURL": "https://support.apple.com/en-us/HT211896",
+      "requiredInstallationDate": "2021-08-31T00:00:00Z",
+      "requiredMinimumOSVersion": "11.5.2"
+    }
+  ]
+}
+
+Real-world Example 2
+
+With the imminent release of macOS Monterey, you may want a minimum OS version for both Big Sur and Monterey:
+
+JSON
+
+{
+  "osVersionRequirements": [
+    {
+      "aboutUpdateURL": "https://support.apple.com/en-us/HT211896",
+      "requiredInstallationDate": "2021-08-31T00:00:00Z",
+      "requiredMinimumOSVersion": "11.5.2",
+      "targetedOSVersionsRule": "11"
+    },
+    {
+      "aboutUpdateURL": "https://www.apple.com/macos/monterey-preview/",
+      "requiredInstallationDate": "2021-10-30T00:00:00Z",
+      "requiredMinimumOSVersion": "12.0.1",
+      "targetedOSVersionsRule": "12"
+    }
+  ]
+}
+
+Incorporating majorUpgradeAppPath
+
+If the intent is to Nudge users on an older major OS to upgrade to the latest major OS, and Nudge users on an older minor version of the current major OS, you can safely pass a value to majorUpgradeAppPath and it will be honored by systems on the older OS, and safely ignored for systems on an earlier minor version of the current major OS. 
+For example, this will do the right thing for all users on 11.x and 12.x for the relative Nudge behaviors: users on 12.2.1 will be directed to the System Preferences pane, while users on 11.x will be directed to the Install macOS Monterey app.
+
+{
+   "osVersionRequirements": [
+    {
+        "majorUpgradeAppPath": "/Applications/Install macOS Monterey.app",
+        "requiredInstallationDate": "2022-04-19T12:00:00Z",
+        "requiredMinimumOSVersion": "12.3",
+        "targetedOSVersionsRule": "default"
+      }
+    ]
+}
+
