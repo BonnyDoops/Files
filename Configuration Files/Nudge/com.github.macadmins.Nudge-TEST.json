@@ -13,26 +13,26 @@
       "aboutUpdateURLs": [
         {
           "_language": "en",
-          "aboutUpdateURL": "https://support.apple.com/en-us/109035"
+          "aboutUpdateURL": "https://support.apple.com/en-us/122868"
         }
       ],
-      "requiredInstallationDate": "2024-12-30T00:00:01Z",
-      "requiredMinimumOSVersion": "14.3.1"
+      "requiredInstallationDate": "2026-08-30T00:00:01",
+      "requiredMinimumOSVersion": "26.6"
     }
   ],
   "userExperience": {
     "allowGracePeriods": false,
-    "allowedDeferrals": 24,
+    "allowedDeferrals": 5,
     "allowedDeferralsUntilForcedSecondaryQuitButton": 5,
-    "approachingRefreshCycle": 6000,
+    "approachingRefreshCycle": 300,
     "approachingWindowTime": 72,
-    "elapsedRefreshCycle": 300,
+    "elapsedRefreshCycle": 60,
     "gracePeriodInstallDelay": 23,
     "gracePeriodLaunchDelay": 1,
     "gracePeriodPath": "/private/var/db/.AppleSetupDone",
-    "imminentRefreshCycle": 600,
+    "imminentRefreshCycle": 60,
     "imminentWindowTime": 24,
-    "initialRefreshCycle": 18000,
+    "initialRefreshCycle": 60,
     "noTimers": false,
     "randomDelay": false
   },
