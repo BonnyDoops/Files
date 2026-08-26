@@ -2,8 +2,8 @@
   "optionalFeatures": {
     "acceptableCameraUsage": true,
     "acceptableScreenSharingUsage": true,
-    "aggressiveUserExperience": true,
-    "aggressiveUserFullScreenExperience": true,
+    "aggressiveUserExperience": false,
+    "aggressiveUserFullScreenExperience": false,
     "asynchronousSoftwareUpdate": true,
     "attemptToFetchMajorUpgrade": true,
     "enforceMinorUpdates": true
